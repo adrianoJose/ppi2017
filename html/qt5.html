@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+	var c = 0;
+	window.onload = function(){
+		var ins = document.querySelector("#instrucao");
+		ins.style.background = "yellow";
+		ins.style.display = "inline"; 
+		
+		var mud = document.querySelector("#mudarndoback");
+		mud.style.background = "green";
+		mud.style.width = "100px"; 
+		mud.style.height = "50px";
+	}
+	function alterarTexto(){
+		var ins = document.querySelector("#instrucao");	
+		c = c + 1;
+		ins.textContent = "Clique aqui! ("+c+")";
+	}	
+	
+		
+	
+	function emcima(){
+		var mud = document.querySelector("#mudarndoback");
+		mud.style.background = "blue";
+	}
+	function fora(){
+		var mud = document.querySelector("#mudarndoback");
+		mud.style.background = "green";
+	}
+</script>
+</head>
+<body>
+<div id = "instrucao" onclick= "alterarTexto() ">
+	Clique aqui!
+</div>
+<div id = "mudarndoback"  onmouseover= "emcima() " onmouseout = "fora()">
+
+</div>	
+</body>
+</html>
